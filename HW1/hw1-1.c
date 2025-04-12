@@ -17,8 +17,7 @@ int main()
         printf("%c%d", ip[i], count);
         
         count = 1;
-    }
-    printf("\n%d", len);    
+    }    
     printf("\n");
     return 0;
     
