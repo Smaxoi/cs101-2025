@@ -26,8 +26,8 @@ int main() {
     scanf("%d", &N);  
     srand(1);  
 
-    fprintf(file, "========= lotto649 =========\n");
-    for (int i = 0; i < 5; i++) { 
+    fprintf(file, "========= lotto649 =========\n");   //注意!!!!!fprintf(FILE *stream, const char *format, ...);檔案放在前
+                                                       //        fwrite(const void *ptr, size_t size, size_t count, FILE *stream);檔案放在後
         fprintf(file, "[%d]: ", i + 1);
         if (i < N) {  
             int lotto[7];
