@@ -17,3 +17,18 @@ int main()
 
     return 0;
 }
+
+towerOfHanoi(3, A, C, B)
+├── towerOfHanoi(2, A, B, C)
+│   ├── towerOfHanoi(1, A, C, B)
+│   │     → print "Move disk 1 from A to C"   ←【return 回到上層】
+│   └── print "Move disk 2 from A to B"
+│   └── towerOfHanoi(1, C, B, A)
+│         → print "Move disk 1 from C to B"   ←【return 回到上層】
+├── print "Move disk 3 from A to C"
+├── towerOfHanoi(2, B, C, A)
+│   ├── towerOfHanoi(1, B, A, C)
+│   │     → print "Move disk 1 from B to A"   ←【return 回到上層】
+│   └── print "Move disk 2 from B to C"
+│   └── towerOfHanoi(1, A, C, B)
+│         → print "Move disk 1 from A to C"   ←【return 回到上層】
