@@ -27,7 +27,7 @@ int main() {
         if(i <= N){
             lotto_generater(lotto, 7);
             for(int j = 0; j < 7; j++){
-                fprintf(file,"%02d ",lotto[j]);
+                fprintf(file,"%02d ",lotto[j]); //%02d 注意! 他會從6 變06 12變12 為多兩位數空位補0
             }
             fprintf(file, "\n");
         }
