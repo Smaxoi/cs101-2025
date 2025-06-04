@@ -1,22 +1,24 @@
-#include <iostream>
 #include <string>
+#include <iostream>
 using namespace std;
 
-class Decoder {
+class Decoder{
+private:
     string s;
 public:
-    Decoder(string str) { s = str; }
-
+    Decoder(string str) { s = str;}
     string get_decode() {
         string res = "", seg = "";
-        for (char c : s) {
-            if (isalpha(c)) {
-                seg += c;
-            } else if (isdigit(c)) {
+        for (char c : s){
+            if(isalpha(c)){
+                seg = seg + c;
+            }
+            else if(isdigit(c)) {
                 int times = c - '0';
-                for (int i = 0; i < times; ++i)
+                for(int i = 0; i < times; i++){
                     res += seg;
-                seg = ""; 
+                }
+                seg = "";
             }
         }
         return res;
