@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <string>
 using namespace std;
 
@@ -7,7 +8,7 @@ protected:
     int h, m, s;
     string ap;
 public:
-    Clock(int hour, int min, int sec, string ampm) {
+    Clock(int hour, int min, int sec, string ampm){
         h = hour; m = min; s = sec; ap = ampm;
     }
     void display() {
@@ -17,14 +18,15 @@ public:
 
 class CGUClock : public Clock {
 public:
-    CGUClock(int hour, int min, int sec, string ap) : Clock(hour, min, sec, ap) {
-        if (ap == "PM" && hour != 12) h += 12;
-        if (ap == "AM" && hour == 12) h = 0;
+    CGUClock(int hour, int min, int sec, string ampm) : Clock(hour, min, sec, ampm) {
+        if(ap == "PM" && hour != 12) h += 12;
+        if(ap == "AM" && hour == 12) h = 0;
     }
     void display() {
-        cout << "CGUClock = " << h << "時" << m << "分" << s << "秒" << endl;
+        cout << "CGUClock = " << h << "時" <<  m << "分" << s << "秒" << endl;
     }
 };
+
 
 int main() {
     Clock cc(10, 25, 43, "AM");
