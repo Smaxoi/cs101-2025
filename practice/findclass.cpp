@@ -1,26 +1,28 @@
-#include <iostream>
 #include <fstream>
+#include <iostream>
 #include <string>
 using namespace std;
-
 class ReadClass {
 public:
     void showClass() {
-        ifstream file("main.cpp");
+        fstream in;
+        in.open("main.cpp");
         string word, names[100];
-        int count = 0;
-        while (file >> word) {
-            if (word == "class") file >> names[count++];
+        int counts = 0;
+        while (in >> word) {
+            if (word == "class") { in >> names[counts++]; }
         }
-        cout << count << " " << "class in main.cpp" << endl;
-        for (int i = 0; i < count; i++)
+        cout << counts << " " << "class in main.cpp" << endl;
+        for (int i = 0; i < counts; i++) {
             cout << "class " << names[i] << endl;
+        }
     }
+    
 };
 
 class myString {
 private:
-    string m_str;
+    string m_str; 
 public:
     myString(string s) { m_str = s; }
 };
