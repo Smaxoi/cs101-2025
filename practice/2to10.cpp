@@ -27,3 +27,16 @@ int main() {
     cout << d.to_decimal("1111") << endl;
     return 0;
 }
+
+
+
+
+//| 函式名稱 | 說明               |
+
+  | ------- | ------------------ |
+  | `stoi`  | string → int       |
+  | `stol`  | string → long      |
+  | `stoll` | string → long long |
+  | `stof`  | string → float     |
+  | `stod`  | string → double    |
+
