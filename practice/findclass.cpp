@@ -5,7 +5,7 @@ using namespace std;
 class ReadClass {
 public:
     void showClass() {
-        fstream in;
+        ifstream in;
         in.open("main.cpp");
         string word, names[100];
         int counts = 0;
